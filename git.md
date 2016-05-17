@@ -9,8 +9,8 @@ Git
 
 
 * NOTE: "Git" is not the same as "GitHub"
-    - Git is a Version Control Repository Framework
-    - GitHub is a company (the most popular) that hosts git repositories and allows them to be viewed from a web interface
+    - ***Git*** is a Version Control Repository Framework
+    - ***GitHub*** is a company (the most popular) that hosts git repositories and allows them to be viewed from a web interface
          
         
         
@@ -42,6 +42,7 @@ Git
 
 ## Other sources of information on git
 
+- [Comparison of TFS and git](http://blog.jessitron.com/2012/12/tfs-and-git-comparison.html)
 - https://git-scm.com/doc
 - https://try.github.io/
 - https://www.codecademy.com/learn/learn-git
