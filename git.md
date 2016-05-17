@@ -8,6 +8,8 @@ Git
 #### There is a Git tutorial available [here](https://try.github.io/) to try git commands
 
 
+## About Git
+
 * NOTE: "Git" is not the same as "GitHub"
     - ***Git*** is a Version Control Repository Framework
     - ***GitHub*** is a company (the most popular) that hosts git repositories and allows them to be viewed from a web interface
@@ -16,6 +18,11 @@ Git
         
 * Unlike TFS, Git does not show what files are currently edited on other user's machines. There is much more of a chance for what is called a "merge conflict" (Two or more simultaneous edits to the same file, which cannot both be pushed to the same repository)
 
+* Created by Linux developers (Initial Release in )
+
+* According to [Wikipedia], has an "emphasis on speed, data integrity, and support for distributed, non-linear workflows."
+
+[Wikipedia]: https://en.wikipedia.org/wiki/Git_(software)
 
 ## Comparison
 
