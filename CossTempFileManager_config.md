@@ -1,7 +1,9 @@
-Coss Temp File Manager
+Coss Temp File Manager Config
 ======================
 
-Configuation file for the [CossTempFileManager](./CossTempFileManager.md)
+* Found in the bin folder with the CossTempFileManager.exe
+
+* Configuation file for the [CossTempFileManager](./CossTempFileManager.md)
 
 ```XML
 <CossTempFileManager>
