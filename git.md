@@ -51,32 +51,32 @@ Git
 
 ### Features of Version Control Systems - Via [blog.jessitron.com](http://blog.jessitron.com/2012/12/tfs-and-git-comparison.html)
 
-Feature| TFS|git
----|--|--
-Save source code | Yes | Yes
-Retain all version history | Yes | Yes
-Group changes into sets | Yes (file level only) | Yes
-Automatic change detection | in 2012 | Yes
-Branch | Yes (not easy) | Yes (very easy)
-Merge between related branches | Yes | Yes (very easy)
-Safe merge between unrelated branches | No | Yes
-Offline access to history | No | Yes
-Offline commit | No | Yes
-Offline commit | No | Yes
-Sneaky automatic merges on the server | Yes | No
-Enforce requirements before commit | Yes | No
-Private local branches | No | Yes
-Learning curve for users | Low | Medium
-Learning curve for administrators | Very high | Medium-high
-GUI support | Strong | Poor
-Conditional commit (if tests work) | Yes | No
-Save IDE state | Yes | No
-Work item tracking | Yes | No
-Automated builds and tests | Yes | No
-Analytics and charting | Yes | No
-Manual test tracking | Yes | No
-Installation | 1/2 day | 10 minutes
-Deployment, central and local | days to months | 1 day
-Free online hosting | Yes | Yes
-Cost | $$$ | free
-Security | Yes | No
+|Feature| TFS|git |
+|---|--|-- |
+|Save source code | Yes | Yes |
+|Retain all version history | Yes | Yes |
+|Group changes into sets | Yes (file level only) | Yes |
+|Automatic change detection | in 2012 | Yes |
+|Branch | Yes (not easy) | Yes (very easy) |
+|Merge between related branches | Yes | Yes (very easy) |
+|Safe merge between unrelated branches | No | Yes |
+|Offline access to history | No | Yes |
+|Offline commit | No | Yes |
+|Offline commit | No | Yes |
+|Sneaky automatic merges on the server | Yes | No | 
+|Enforce requirements before commit | Yes | No | 
+|Private local branches | No | Yes | 
+|Learning curve for users | Low | Medium | 
+|Learning curve for administrators | Very high | Medium-high | 
+|GUI support | Strong | Poor | 
+|Conditional commit (if tests work) | Yes | No | 
+|Save IDE state | Yes | No | 
+|Work item tracking | Yes | No | 
+|Automated builds and tests | Yes | No | 
+|Analytics and charting | Yes | No | 
+|Manual test tracking | Yes | No | 
+|Installation | 1/2 day | 10 minutes | 
+|Deployment, central and local | days to months | 1 day | 
+|Free online hosting | Yes | Yes | 
+|Cost | $$$ | free | 
+|Security | Yes | No | 
