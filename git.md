@@ -18,7 +18,7 @@ Git
         
 * Unlike TFS, Git does not show what files are currently edited on other user's machines. There is much more of a chance for what is called a "merge conflict" (Two or more simultaneous edits to the same file, which cannot both be pushed to the same repository)
 
-* Created by Linux developers (Initial Release in )
+* Created by Linux developers (Initial Release in 2005)
 
 * According to [Wikipedia], has an "emphasis on speed, data integrity, and support for distributed, non-linear workflows."
 

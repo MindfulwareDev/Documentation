@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel="icon" href="favicon.ico">
+    <title>Going from TFS to Git</title>
+    <style>
+        h1 {
+            font-size: 50px;
+            padding-top: 10px;
+        }
+        
+        table td,
+        table th {
+            border: black thin solid;
+            margin: 0px;
+            padding: 10px;
+        }
+        
+        table th {
+            background-color: lightgray;
+        }
+        
+        table {
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Git</h1>
+        <h2>Transferring from TFS to git</h2>
+        <p><img src="git.png" alt="Git Icon" style="max-width:100%;"></p>
+        <h4>There is a Git tutorial available <a href="https://try.github.io/">here</a> to try git commands</h4>
+        <h2>About Git</h2>
+        <ul>
+            <li>
+                <p>NOTE: "Git" is not the same as "GitHub"</p>
+                <ul>
+                    <li><strong><em>Git</em></strong> is a Version Control Repository Framework</li>
+                    <li><strong><em>GitHub</em></strong> is a company (the most popular) that hosts git repositories and allows them to be viewed from a web interface</li>
+                </ul>
+            </li>
+            <li>
+                <p>Unlike TFS, Git does not show what files are currently edited on other user's machines. There is much more of a chance for what is called a "merge conflict" (Two or more simultaneous edits to the same file, which cannot both be pushed to the same repository)</p>
+            </li>
+            <li>
+                <p>Created by Linux developers (Initial Release in )</p>
+            </li>
+            <li>
+                <p>According to <a href="https://en.wikipedia.org/wiki/Git_(software)">Wikipedia</a>, has an "emphasis on speed, data integrity, and support for distributed, non-linear workflows."</p>
+            </li>
+        </ul>
+        <h2>Comparison</h2>
+        <h3><strong>Git</strong></h3>
+        <ul>
+            <li>is integrated into <em>some</em> IDEs and coding environments, however is mostly just a mask to the git commands below (therefore, easy to implement)</li>
+            <li>Open Source, has no "owner"</li>
+        </ul>
+        <h3><strong>TFS</strong></h3>
+        <ul>
+            <li>is integrated into Visual Studio and somewhat into Eclipse, but that is more or less it</li>
+            <li>Owned by Microsoft</li>
+            <li>Now allows git integration into it's main version control framework</li>
+        </ul>
+        <h3>Commands</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>TFS (From inside Visual Studio)</th>
+                    <th>Git (Using command line interface)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>"Get latest"</td>
+                    <td><code>&gt;$ git pull</code></td>
+                </tr>
+                <tr>
+                    <td>"Check in Pending Changes"</td>
+                    <td><code>&gt;$ git commit -m "[Commit Message]"</code>
+                        <br> <code>&gt;$ git push</code></td>
+                </tr>
+                <tr>
+                    <td>"Undo Pending Changes"</td>
+                    <td><code>&gt;$ git add .</code>
+                        <br> <code>&gt;$ git reset --hard</code></td>
+                </tr>
+                <tr>
+                    <td>"Compare"</td>
+                    <td><code>&gt;$ git status</code></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Other sources of information on git</h2>
+        <ul>
+            <li><a href="http://blog.jessitron.com/2012/12/tfs-and-git-comparison.html">Comparison of TFS and git</a></li>
+            <li><a href="https://git-scm.com/doc">https://git-scm.com/doc</a></li>
+            <li><a href="https://try.github.io/">https://try.github.io/</a></li>
+            <li><a href="https://www.codecademy.com/learn/learn-git">https://www.codecademy.com/learn/learn-git</a></li>
+            <li><a href="https://www.atlassian.com/git/">https://www.atlassian.com/git/</a></li>
+            <li><a href="http://gitimmersion.com/">http://gitimmersion.com/</a></li>
+        </ul>
+        <h3>Features of Version Control Systems - Via <a href="http://blog.jessitron.com/2012/12/tfs-and-git-comparison.html">blog.jessitron.com</a></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>TFS</th>
+                    <th>git</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Save source code</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Retain all version history</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Group changes into sets</td>
+                    <td>Yes (file level only)</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Automatic change detection</td>
+                    <td>in 2012</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Branch</td>
+                    <td>Yes (not easy)</td>
+                    <td>Yes (very easy)</td>
+                </tr>
+                <tr>
+                    <td>Merge between related branches</td>
+                    <td>Yes</td>
+                    <td>Yes (very easy)</td>
+                </tr>
+                <tr>
+                    <td>Safe merge between unrelated branches</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Offline access to history</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Offline commit</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Offline commit</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Sneaky automatic merges on the server</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Enforce requirements before commit</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Private local branches</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Learning curve for users</td>
+                    <td>Low</td>
+                    <td>Medium</td>
+                </tr>
+                <tr>
+                    <td>Learning curve for administrators</td>
+                    <td>Very high</td>
+                    <td>Medium-high</td>
+                </tr>
+                <tr>
+                    <td>GUI support</td>
+                    <td>Strong</td>
+                    <td>Poor</td>
+                </tr>
+                <tr>
+                    <td>Conditional commit (if tests work)</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Save IDE state</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Work item tracking</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Automated builds and tests</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Analytics and charting</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Manual test tracking</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Installation</td>
+                    <td>1/2 day</td>
+                    <td>10 minutes</td>
+                </tr>
+                <tr>
+                    <td>Deployment, central and local</td>
+                    <td>days to months</td>
+                    <td>1 day</td>
+                </tr>
+                <tr>
+                    <td>Free online hosting</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Cost</td>
+                    <td>$$$</td>
+                    <td>free</td>
+                </tr>
+                <tr>
+                    <td>Security</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
