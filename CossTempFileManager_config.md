@@ -1,6 +1,8 @@
 Coss Temp File Manager
 ======================
 
+Configuation file for the [CossTempFileManager](./CossTempFileManager.md)
+
 ```XML
 <CossTempFileManager>
 	<IntervalInSeconds>86400</IntervalInSeconds>
