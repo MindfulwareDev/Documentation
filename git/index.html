@@ -4,57 +4,11 @@
 <head>
     <link rel="icon" href="favicon.ico" />
     <title>Going from TFS to Git</title>
-    <style>
-        @font-face {
-            font-family: "Roboto";
-            src: url(../fonts/Roboto.ttf) format("truetype");
-        }
-        
-        * {
-            font-family: "Roboto", sans-serif;
-        }
-        
-        h1 {
-            font-size: 75px;
-            padding-top: 10px;
-        }
-        
-        table td,
-        table th {
-            border: black thin solid;
-            margin: 0px;
-            padding: 10px;
-        }
-        
-        table th {
-            background-color: lightgray;
-        }
-        
-        table {
-            margin: 0px;
-            padding: 0px;
-        }
-        
-        div.container {
-            background: linear-gradient(white, white, lightgray);
-            width: 100%;
-            padding-left: 10%;
-            padding-right: 10%;
-            padding-bottom: 10%;
-        }
-    </style>
-    <script>
-        var elements = $('*');
-        $.each(elements, function(x, o) {
-            var size = $(this).css('font-size');
-            $()
-        });
-    </script>
+    <script src="../js/jquery.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <script src="../js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="../js/jquery.js" type="text/javascript"></script>
-
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -82,6 +36,7 @@
                 <p>According to <a href="https://en.wikipedia.org/wiki/Git_(software)">Wikipedia</a>, has an "emphasis on speed, data integrity, and support for distributed, non-linear workflows."</p>
             </li>
         </ul>
+        <hr class="featurette-divider">
         <h2>Comparison</h2>
         <h3><strong>Git</strong></h3>
         <ul>
@@ -94,6 +49,7 @@
             <li>Owned by Microsoft</li>
             <li>Now allows git integration into it's main version control framework</li>
         </ul>
+        <hr class="featurette-divider">
         <h3>Commands</h3>
 
         <table>
@@ -124,6 +80,8 @@
                 </tr>
             </tbody>
         </table>
+        <hr class="featurette-divider">
+
         <h2>Other sources of information on git</h2>
         <ul>
             <li><a href="http://blog.jessitron.com/2012/12/tfs-and-git-comparison.html">Comparison of TFS and git</a></li>
@@ -280,6 +238,11 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div id="foot" style="background-color: transparent;">
+        <p>Last Edited by Keith MacKay on 5/17/2016 for
+            <a href="http://www.ipipeline.com/">iPipeline</a>
+        </p>
     </div>
 </body>
 
