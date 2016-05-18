@@ -50,36 +50,61 @@
             <li>Now allows git integration into it's main version control framework</li>
         </ul>
         <hr class="featurette-divider">
+        <h3>Commits</h3>
+        <ul>
+            <li>A Commit is a set of changes that have been made to a set of files</li>
+            <li>All changes are tracked using commits, which contain information on new files, edited files, deleted files, and so on</li>
+            <li>The command <code>commit</code> creates a new commit with the files that are currently being tracked (were included in the <code>add</code>)</li>
+            <li>The command <code>push</code> sends local commits to the remote</li>
+        </ul>
+        <hr class="featurette-divider">
         <h3>Commands</h3>
-
         <table>
             <thead>
                 <tr>
+                    <th>Action</th>
                     <th>TFS (From inside Visual Studio)</th>
                     <th>Git (Using command line interface)</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <td>Pull changes from the remote server to the local drive</td>
                     <td>"Get latest"</td>
                     <td><code>&gt;$ git pull</code></td>
                 </tr>
                 <tr>
+                    <td>Push changes made locally to the remote server</td>
                     <td>"Check in Pending Changes"</td>
-                    <td><code>&gt;$ git commit -m "[Commit Message]"</code>
+                    <td><code>&gt;$ git add [regex]</code>
+                        <br><code>&gt;$ git commit -m "[Commit Message]"</code>
                         <br> <code>&gt;$ git push</code></td>
                 </tr>
                 <tr>
+                    <td>Get rid of local changes and return to the files on the remote server</td>
                     <td>"Undo Pending Changes"</td>
-                    <td><code>&gt;$ git add .</code>
+                    <td><code>&gt;$ git add [regex]</code>
                         <br> <code>&gt;$ git reset --hard</code></td>
                 </tr>
                 <tr>
+                    <td>Calculate the differences between the local files and the remote files</td>
                     <td>"Compare"</td>
                     <td><code>&gt;$ git status</code></td>
                 </tr>
             </tbody>
         </table>
+        <hr class="featurette-divider">
+        <h3>Branches</h3>
+        <ul>
+            <li>Branches are separate portions of the same repository</li>
+            <li>Different branches do not <em>need</em> to contain the same files or commits</li>
+            <li>To create a new branch, the command is <code>&gt;$ git branch "new-branch-name"</code>
+                <ul>
+                    <li>Creates a branch with the given name that contains all of the same files and commits as the branch that it was created from</li>
+                    <li>To create a branch that has no files in it, use the <code>--orphan</code> parameter</li>
+                </ul>
+            </li>
+        </ul>
         <hr class="featurette-divider">
 
         <h2>Other sources of information on git</h2>
@@ -240,7 +265,7 @@
         </table>
     </div>
     <div id="foot" style="background-color: transparent;">
-        <p>Last Edited by Keith MacKay on 5/17/2016 for
+        <p>Last Edited by Keith MacKay on 5/18/2016 for
             <a href="http://www.ipipeline.com/">iPipeline</a>
         </p>
     </div>
