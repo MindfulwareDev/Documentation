@@ -36,16 +36,29 @@ Git
  - Now allows git integration into it's main version control framework
 
 
+### Commits
+* A Commit is a set of changes that have been made to a set of files
+* All changes are tracked using commits, which contain information on new files, edited files, deleted files, and so on
+* The command `commit` creates a new commit with the files that are currently being tracked (were included in the `add`)
+* The command `push` sends local commits to the remote
 
 ### Commands
 
-|TFS (From inside Visual Studio)   |Git (Using command line interface)   |
-|------|--------|
-|"Get latest"| `>$ git pull`  |
-|"Check in Pending Changes"| `>$ git commit -m "[Commit Message]"`<br> `>$ git push`  |
-| "Undo Pending Changes"| `>$ git add .`<br> `>$ git reset --hard`|
-| "Compare"| `>$ git status`|
+| Action |TFS (From inside Visual Studio)   |Git (Using command line interface)   |
+|-----|------|--------|
+|Pull changes from the remote server to the local drive|"Get latest"| `>$ git pull`  |
+| Push changes made locally to the remote server |"Check in Pending Changes"| `>$ git add [regex]` <br>`>$ git commit -m "[Commit Message]"`<br> `>$ git push`  |
+| Get rid of local changes and return to the files on the remote server | "Undo Pending Changes"| `>$ git add [regex]`<br> `>$ git reset --hard`|
+| Calculate the differences between the local files and the remote files | "Compare"| `>$ git status`|
 
+
+### Branches
+
+* Branches are separate portions of the same repository
+* Different branches do not *need* to contain the same files or commits
+* To create a new branch, the command is `>$ git branch "new-branch-name"`
+    - Creates a branch with the given name that contains all of the same files and commits as the branch that it was created from
+    - To create a branch that has no files in it, use the `--orphan` parameter
 
 ## Other sources of information on git
 
