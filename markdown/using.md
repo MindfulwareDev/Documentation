@@ -16,7 +16,8 @@
     * Visual Basic
     ```vb
     Using stream As New StreamReader("example.txt")
-        //Use the object here
-        //note: stream cannot be referenced outside of this region
+        'Use the object here
+        'note: stream cannot be referenced outside of this region
     End Using
     ```
+    * Doing this will allow usage of the object without the possibility that an exception is raised due to the I/O
