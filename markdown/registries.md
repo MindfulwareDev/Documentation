@@ -13,4 +13,4 @@
 |USE_DNS_NAME|B|A|
 |WEBSVR_ADDR|aaa-uat1.ipipeline.com<br>*(domain did not reply to ping)*|10.128.145.75 *(this machine)*|
 
-###Note: I pinged aaa-uat1.ipipeline.com, and the DNS resolved to 216.21.246.187, however the ping timed out. 
+### Note: I pinged aaa-uat1.ipipeline.com, and the DNS resolved to 216.21.246.187, however the ping timed out. 
