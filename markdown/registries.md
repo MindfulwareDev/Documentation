@@ -1,4 +1,4 @@
-#Registry Differences
+# Registry Differences
 
 |Key| T3AIGOWEB01|Q3BIGOWEB01|
 |-----------------|----------|---------------------|
