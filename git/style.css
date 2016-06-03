@@ -7,6 +7,10 @@
     font-family: "Roboto", sans-serif;
 }
 
+nav * {
+    max-height: 50px;
+}
+
 h1 {
     font-size: 75px;
     padding-top: 10px;
@@ -71,4 +75,104 @@ div#foot p {
     padding-right: 15px;
     background-color: lightgray;
     height: 100%;
+}
+
+
+/* Dropdown Button */
+
+.dropbtn {
+    background-color: transparent;
+    color: #777;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-nav > li {
+    height: 100%;
+}
+
+.navbar-nav > li:not(.not-link):hover {
+    background-color: lightgray;
+}
+
+li.not-link {
+    cursor: default;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.navbar .navbar-brand {
+    padding-top: 5px;
+}
+
+.navbar .navbar-brand > img {
+    padding-top: 0px;
+    max-height: 40px;
+}
+
+.dropdown-content a {
+    color: #777;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: transparent;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: transparent;
+    color: black;
+}
+
+.featurette-divider {
+    margin-bottom: 40px;
+}
+
+nav {
+    max-height: 50px;
+}
+
+td,
+li {
+    font-size: 20px;
+}
+
+p {
+    font-size: 25px;
+}
+
+.navbar-text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 7px;
+    height: 100%;
+    vertical-align: middle;
 }

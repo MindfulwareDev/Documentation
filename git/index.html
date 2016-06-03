@@ -12,32 +12,58 @@
 </head>
 
 <body>
-    <div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://www.ipipeline.com/"><img alt="Brand" src="ipipeline.png" /></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="not-link">
+                        <p class="navbar-text">Navigate To</p>
+                    </li>
+                    <li><a href="#about">About Git</a></li>
+                    <li><a href="#comparison">Comparison</a></li>
+                    <li><a href="#commands">Commands</a></li>
+                    <li><a href="#installation">Installation</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="margin-top: 50px;">
         <h1 style="font-size: 75px;">Git</h1>
         <h2>Transferring from TFS to git</h2>
         <p><img src="git.png" alt="Git Icon" style="max-width:100%;"></p>
-        <h4>There is a Git tutorial available <a href="https://try.github.io/">here</a> to try git commands</h4>
-        <h2>About Git</h2>
-        <ul>
-            <li>
-                <p>NOTE: "Git" is not the same as "GitHub"</p>
-                <ul>
-                    <li><strong><em>Git</em></strong> is a Version Control Repository Framework</li>
-                    <li><strong><em>GitHub</em></strong> is a company (the most popular) that hosts git repositories and allows them to be viewed from a web interface</li>
-                </ul>
-            </li>
-            <li>
-                <p>Unlike TFS, Git does not show what files are currently edited on other user's machines. There is much more of a chance for what is called a "merge conflict" (Two or more simultaneous edits to the same file, which cannot both be pushed
-                    to the same repository)</p>
-            </li>
-            <li>
-                <p>Created by Linux developers (Initial Release in 2005)</p>
-            </li>
-            <li>
-                <p>According to <a href="https://en.wikipedia.org/wiki/Git_(software)">Wikipedia</a>, has an "emphasis on speed, data integrity, and support for distributed, non-linear workflows."</p>
-            </li>
-        </ul>
-        <hr class="featurette-divider">
+        <h4 id="about">There is a Git tutorial available <a href="https://try.github.io/">here</a> to try git commands</h4>
+        <div>
+            <h2>About Git</h2>
+            <ul>
+                <li>
+                    <p>NOTE: "Git" is not the same as "GitHub"</p>
+                    <ul>
+                        <li><strong><em>Git</em></strong> is a Version Control Repository Framework</li>
+                        <li><strong><em>GitHub</em></strong> is a company (the most popular) that hosts git repositories and allows them to be viewed from a web interface</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Unlike TFS, Git does not show what files are currently edited on other user's machines. There is much more of a chance for what is called a "merge conflict" (Two or more simultaneous edits to the same file, which cannot both be pushed to the same repository)</p>
+                </li>
+                <li>
+                    <p>Created by Linux developers (Initial Release in 2005)</p>
+                </li>
+                <li>
+                    <p>According to <a href="https://en.wikipedia.org/wiki/Git_(software)">Wikipedia</a>, has an "emphasis on speed, data integrity, and support for distributed, non-linear workflows."</p>
+                </li>
+            </ul>
+        </div>
+        <hr class="featurette-divider" id="comparison">
         <h2>Comparison</h2>
         <h3><strong>Git</strong></h3>
         <ul>
@@ -50,7 +76,7 @@
             <li>Owned by Microsoft</li>
             <li>Now allows git integration into it's main version control framework</li>
         </ul>
-        <hr class="featurette-divider">
+        <hr class="featurette-divider" id="commits">
         <h3>Commits</h3>
         <ul>
             <li>A Commit is a set of changes that have been made to a set of files</li>
@@ -58,61 +84,69 @@
             <li>The command <code>commit</code> creates a new commit with the files that are currently being tracked (were included in the <code>add</code>)</li>
             <li>The command <code>push</code> sends local commits to the remote</li>
         </ul>
+        <hr class="featurette-divider" id="commands">
+        <div>
+            <h3>Commands</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>TFS (From inside Visual Studio)</th>
+                        <th>Git (Using command line interface)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pull changes from the remote server to the local drive</td>
+                        <td>"Get latest"</td>
+                        <td><code>&gt;$ git pull</code></td>
+                    </tr>
+                    <tr>
+                        <td>Push changes made locally to the remote server</td>
+                        <td>"Check in Pending Changes"</td>
+                        <td><code>&gt;$ git add [regex]</code>
+                            <br><code>&gt;$ git commit -m "[Commit Message]"</code>
+                            <br> <code>&gt;$ git push</code></td>
+                    </tr>
+                    <tr>
+                        <td>Get rid of local changes and return to the files on the remote server</td>
+                        <td>"Undo Pending Changes"</td>
+                        <td><code>&gt;$ git add [regex]</code>
+                            <br> <code>&gt;$ git reset --hard</code></td>
+                    </tr>
+                    <tr>
+                        <td>Calculate the differences between the local files and the remote files</td>
+                        <td>"Compare"</td>
+                        <td><code>&gt;$ git status</code></td>
+                    </tr>
+                    <tr>
+                        <td>Initially getting files from remote server to local machine</td>
+                        <td>Mapping to local folder and performing an initial pull</td>
+                        <td><code>&gt;$ git clone [url to remote repository]</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr class="featurette-divider" id="branches">
+        <div id="branches">
+            <h3>Branches</h3>
+            <ul>
+                <li>Branches are separate portions of the same repository</li>
+                <li>Different branches do not <em>need</em> to contain the same files or commits</li>
+                <li>To create a new branch, the command is <code>&gt;$ git branch "new-branch-name"</code>
+                    <ul>
+                        <li>Creates a branch with the given name that contains all of the same files and commits as the branch that it was created from</li>
+                        <li>To create a branch that has no files in it, use the <code>--orphan</code> parameter</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <hr class="featurette-divider" id="installation">
+        <div>
+            <h2>Installation</h2>
+            <p>There is a GitHub Windows Desktop interface available at <a href="https://desktop.github.com/">this link</a></p>
+        </div>
         <hr class="featurette-divider">
-        <h3>Commands</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Action</th>
-                    <th>TFS (From inside Visual Studio)</th>
-                    <th>Git (Using command line interface)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Pull changes from the remote server to the local drive</td>
-                    <td>"Get latest"</td>
-                    <td><code>&gt;$ git pull</code></td>
-                </tr>
-                <tr>
-                    <td>Push changes made locally to the remote server</td>
-                    <td>"Check in Pending Changes"</td>
-                    <td><code>&gt;$ git add [regex]</code>
-                        <br><code>&gt;$ git commit -m "[Commit Message]"</code>
-                        <br> <code>&gt;$ git push</code></td>
-                </tr>
-                <tr>
-                    <td>Get rid of local changes and return to the files on the remote server</td>
-                    <td>"Undo Pending Changes"</td>
-                    <td><code>&gt;$ git add [regex]</code>
-                        <br> <code>&gt;$ git reset --hard</code></td>
-                </tr>
-                <tr>
-                    <td>Calculate the differences between the local files and the remote files</td>
-                    <td>"Compare"</td>
-                    <td><code>&gt;$ git status</code></td>
-                </tr>
-                <tr>
-                    <td>Initially getting files from remote server to local machine</td>
-                    <td>Mapping to local folder and performing an initial pull</td>
-                    <td><code>&gt;$ git clone [url to remote repository]</code></td>
-                </tr>
-            </tbody>
-        </table>
-        <hr class="featurette-divider">
-        <h3>Branches</h3>
-        <ul>
-            <li>Branches are separate portions of the same repository</li>
-            <li>Different branches do not <em>need</em> to contain the same files or commits</li>
-            <li>To create a new branch, the command is <code>&gt;$ git branch "new-branch-name"</code>
-                <ul>
-                    <li>Creates a branch with the given name that contains all of the same files and commits as the branch that it was created from</li>
-                    <li>To create a branch that has no files in it, use the <code>--orphan</code> parameter</li>
-                </ul>
-            </li>
-        </ul>
-        <hr class="featurette-divider">
-
         <h2>Other sources of information on git</h2>
         <ul>
             <li><a href="http://blog.jessitron.com/2012/12/tfs-and-git-comparison.html">Comparison of TFS and git</a></li>
@@ -271,7 +305,7 @@
         </table>
     </div>
     <div id="foot" style="background-color: transparent;">
-        <p>Last Edited by Keith MacKay on 5/18/2016 for
+        <p>Last Edited by Keith MacKay on 6/3/2016 for
             <a href="http://www.ipipeline.com/">iPipeline</a>
         </p>
     </div>
