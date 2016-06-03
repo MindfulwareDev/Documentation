@@ -11,5 +11,3 @@
 |USE_DNS_NAME|B|A|
 |WEBSVR_ADDR|aaa-uat1.ipipeline.com|10.128.145.75|
 
-
-*(Different as of 6/2)*
