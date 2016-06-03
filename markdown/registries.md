@@ -1,7 +1,7 @@
 #Registry Differences
 
 |Key| T3AIGOWEB01|Q3BIGOWEB01|
-|--|--|--|
+|-----------------|----------|---------------------|
 |APPSVR|A|B *(Different as of 6/2)*|
 |APPSVR_INSTALLED|Y|N *(Different as of 6/2)*|
 |DBSVR|A|B *(Different as of 6/2)*|
