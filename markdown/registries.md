@@ -4,6 +4,8 @@
 |-----------------|----------|---------------------|
 |APPSVR|A|B *(Different as of 6/2)*|
 |APPSVR_INSTALLED|Y|N *(Different as of 6/2)*|
+|DB_LOGIN_NAME|*Empty String*|cossnet|
+|DB_NAME|*Empty String*|cossnet|
 |DBSVR|A|B *(Different as of 6/2)*|
 |DBSVR_INSTALLED|Y|N *(Different as of 6/2)*|
 |DNS_NAME|aaa-uat1.ipipeline.com|*Empty String*|
