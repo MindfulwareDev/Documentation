@@ -52,45 +52,45 @@
 
 <body>
     <div class="container">
-        <article class="markdown-body entry-content" itemprop="text">
-            <h1>InstallWiz Technical Process</h1>
+        <h1>InstallWiz Technical Process</h1>
+        <h3>Source Code is available in TFS at <code>$/Software Configuration/INSTALL/Utilities/InstallWiz</code></h3>
+        <h3>Deployed and running on the ABI Server (TX0ABIWEB01) at E:\InstallWiz\InstallWiz.exe</h3>
+        <ul>
+            <li>Every 5 minutes, this program is launched by the Task Scheduler</li>
+            <li>Check the Database (build_system.Install table) for any records where the 'Started' column is null and the build was listed as a success.
 
-            <ul>
-                <li>Check the Database (build_system.Install table) for any records where the 'Started' column is null and the build was listed as a success.
+                <ul>
+                    <li>Change any found records to read 'Underway'</li>
+                </ul>
+            </li>
+            <li>Gather Install parameters from the database records, including:
 
-                    <ul>
-                        <li>Change any found records to read 'Underway'</li>
-                    </ul>
-                </li>
-                <li>Gather Install parameters from the database records, including:
-
-                    <ul>
-                        <li>Build Number</li>
-                        <li>64 or 32 bit install</li>
-                        <li>Abbreviation of the company</li>
-                        <li>IP Address of the Target Server</li>
-                        <li>IP Address of the App Server</li>
-                        <li>Database name</li>
-                        <li>Role</li>
-                        <li>Install ID</li>
-                        <li>Old Build Number</li>
-                        <li>Email Addresses to notify</li>
-                    </ul>
-                </li>
-                <li>Map the Target server to the P Drive</li>
-                <li>Delete the previous install from the server</li>
-                <li>Copy the new build from the ABI server to the Target server</li>
-                <li>Create and run SILENT_INSTALL.BAT on the target server</li>
-                <li>Create SILENT_INSTALL.INI and move it to the Target server</li>
-                <li>Run setup.exe on the Target server via the psExec command, with the parameter ('/UNATTENDED=SILENT_INSTALL.INI') to let the program know to run in silent mode.</li>
-                <li>Delete the SILENT_INSTALL.BAT and SILENT_INSTALL.INI files from the Target server</li>
-                <li>Update the CossEnterpriseSuite\web.config file on the DMZ Server with the new StateDriver information from the SessionState</li>
-                <li>Un-Map the P drive</li>
-                <li>Update the Database record for this install to 'Completed'</li>
-                <li>Email all associated accounts that the installation has completed</li>
-            </ul>
-            <code><script src="https://gist.github.com/kmackayipipe/7f12da8f2a8cc7f623025b77b350fa18.js"></script></code>
-        </article>
+                <ul>
+                    <li>Build Number</li>
+                    <li>64 or 32 bit install</li>
+                    <li>Abbreviation of the company</li>
+                    <li>IP Address of the Target Server</li>
+                    <li>IP Address of the App Server</li>
+                    <li>Database name</li>
+                    <li>Role</li>
+                    <li>Install ID</li>
+                    <li>Old Build Number</li>
+                    <li>Email Addresses to notify</li>
+                </ul>
+            </li>
+            <li>Map the Target server to the P Drive</li>
+            <li>Delete the previous install from the server</li>
+            <li>Copy the new build from the ABI server to the Target server</li>
+            <li>Create and run SILENT_INSTALL.BAT on the target server</li>
+            <li>Create SILENT_INSTALL.INI and move it to the Target server</li>
+            <li>Run setup.exe on the Target server via the psExec command, with the parameter ('/UNATTENDED=SILENT_INSTALL.INI') to let the program know to run in silent mode.</li>
+            <li>Delete the SILENT_INSTALL.BAT and SILENT_INSTALL.INI files from the Target server</li>
+            <li>Update the CossEnterpriseSuite\web.config file on the DMZ Server with the new StateDriver information from the SessionState</li>
+            <li>Un-Map the P drive</li>
+            <li>Update the Database record for this install to 'Completed'</li>
+            <li>Email all associated accounts that the installation has completed</li>
+        </ul>
+        <code><script src="https://gist.github.com/kmackayipipe/7f12da8f2a8cc7f623025b77b350fa18.js"></script></code>
     </div>
 </body>
 
